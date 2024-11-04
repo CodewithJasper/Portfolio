@@ -634,16 +634,16 @@ form .marginreset {
     font-size: var(--font-size-main);
     font-weight: 600;
     text-align: center;
-  }
-  .overlay span {
+}
+.overlay span {
     font-weight: 600;
     font-size: var(--font-size-main);
     margin-bottom: 0.5em;
-  }
-  #clearConfirm {
+}
+#clearConfirm {
     flex-direction: column;
-  }
-  .margin button {
+}
+.margin button {
     border: 1px solid black;
     background-color: var(--color-main);
     font-size: 14px;
@@ -653,13 +653,19 @@ form .marginreset {
     border-radius: 25px;
     transition: 0.3s;
     margin-left: 0.1em;
-  }
-  #confirmClear {
+}
+#confirmClear {
     margin-left: 0.7em;
-  }
-  
-  .margin button:hover {
+}
+.margin button:hover {
     order: 1px solid black;
     background-color: var(--color-white);
     color: var(--color-black);
-  }
+}
+.footer {
+    color: var(--color-black);
+    text-align: center;
+    font-size: small;
+    font-weight: 500;
+    margin-bottom: 2em;
+}
