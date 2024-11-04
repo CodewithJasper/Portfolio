@@ -1,0 +1,665 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root {
+    --color-white: white;
+    --color-black: black;
+    --color-main: #cf455e;
+    --color-main2: #df8b98;
+    --color-main3: #f6dde1;
+    --border: 2px solid black;
+    --font-size-main: 18px;
+    --content-font: 14px;
+    --padding: 1.8em;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins';
+    font-size: var(--font-size-main);
+    background-color: var(--color-white);
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: var(--color-white);
+    margin: 0;
+    height: 3em;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border);
+    z-index: 1000;
+}
+.logo {
+    font-size: 27px;
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 2em;
+}
+.logo span {
+    font-size: medium;
+}
+.logo span span {
+    color: var(--color-main);
+}
+nav {
+    margin-right: 2em;
+}
+nav a {
+    font-size: var(--font-size-main);
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 2em;
+    position: relative;
+    transition: 0.3s;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background: var(--color-black);
+    left: 0;
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+nav a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+nav a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background: var(--color-black);
+    left: 0;
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(1);
+}
+nav a.active::after {
+    transform-origin: left;
+}
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    scroll-margin-top: 4.5em;
+    margin: 4.5em 3em 2em;
+    height: 85.5vh;
+    background-image: linear-gradient(to right, #cf455e, rgba(255, 255, 255, 0));
+    border: var(--border);
+}
+#home .branding {
+    position: absolute;
+    padding: 6em;
+    color: var(--color-white);
+    z-index: 2;
+}
+.branding div {
+    font-size: 20px;
+    font-weight: 600;
+}
+.branding p {
+    font-size: var(--content-font);
+}
+.branding span {
+    font-size: 20px;
+}
+.branding span span {
+    background-color: white;
+    color: #cf455e;
+    font-weight: 600;
+    padding: 0 7px;
+}
+.branding h1 {
+    font-size: 40px;
+    margin: 0;
+}
+#home button {
+    border: 1px solid black;
+    background-color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-black);
+    padding: 0.4em 0.9em;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+#home button:hover {
+    border: 1px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: var(--color-white);
+}
+#home img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.sectiontitle1 {
+    color: var(--color-black);
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+.sectiontitle1 span{
+    color: var(--color-main);
+}
+#about {
+    scroll-margin-top: 4.5em;
+    margin: 2em 3em;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 27.3vh 27.3vh 27.3vh;
+    grid-template-areas:
+    "image introduction"
+    "image goals"
+    "education interests";
+    grid-gap: 0.8rem;
+}
+#about h3 {
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    margin: 0;
+}
+#about p {
+    font-size: var(--content-font);
+    margin: 0.5em 0 0 0;
+}
+#about .image {
+    background-image: linear-gradient(to right, #cf455e, rgba(255, 255, 255, 0));
+    position: relative;
+    border: var(--border);
+    grid-area: image;
+}
+#about img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#about .introduction {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: introduction;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#about .interests {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: interests;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#about .goals {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: goals;
+    padding: var(--padding);
+}
+#about .education {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: education;
+    padding: var(--padding);
+}
+#about .education span {
+    background-color: var(--color-main);
+    border: 1px solid black;
+    color: var(--color-white);
+    padding: 0.2em 0.7em;
+    border-radius: 25px;
+    font-size: 0.7rem;
+}
+.education i {
+    margin-right: 0.5em;
+    font-size: large;
+}
+.sectiontitle2 {
+    color: var(--color-black);
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+.sectiontitle2 span{
+    color: var(--color-main);
+}
+#skills {
+    scroll-margin-top: 4.5em;
+    margin: 2em 3em;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 32vh;
+    grid-template-areas:
+    "html css javascript figma";
+    grid-gap: 0.8rem;
+}
+#skills h3 {
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    margin: 0;
+}
+#skills p {
+    font-size: var(--content-font);
+    margin: 0.5em 0 0 0;
+}
+#skills .html {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: html;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#skills .css {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: css;
+    padding: var(--padding);
+}
+#skills .javascript {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: javascript;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#skills .figma {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: figma;
+    padding: var(--padding);
+}
+.sectiontitle3 {
+    color: var(--color-black);
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+.sectiontitle3 span{
+    color: var(--color-main);
+}
+#projects {
+    scroll-margin-top: 4.5em;
+    margin: 2em 3em;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 21.9vh 21.9vh 21.9vh 21.9vh 21.9vh 21.9vh;
+    grid-template-areas:
+    "learn description image image"
+    "learn description image image"
+    "image2 image2 description2 learn2"
+    "image2 image2 description2 learn2 "
+    "learn3 description3 image3 image3"
+    "learn3 description3 image3 image3";
+    grid-gap: 0.8rem;
+}
+#projects h3 {
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    margin: 0;
+}
+#projects p {
+    font-size: var(--content-font);
+    margin: 0.5em 0 0 0;
+}
+#projects img {
+    width: 100%;
+    height: auto;
+}
+#projects .image, .image2, .image3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.slides, .slides2, .slides3 {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.dots, .dots2, .dots3 {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+}
+.dot, .dot2, .dot3 {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.dot.active, .dot2.active, .dot3.active {
+    background-color: #717171;
+}
+#projects .description {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border: var(--border);
+    grid-area: description;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.description a, .description3 a {
+    text-decoration: none;
+    width: fit-content;
+    border: 1px solid white;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    padding: 0.3em 0.7em;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    transition: 0.3s;
+}
+.description a:hover, .description3 a:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+#projects .image {
+    border: var(--border);
+    grid-area: image;
+}
+#projects .learn {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: learn;
+    padding: var(--padding);
+}
+#projects .description2 {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: description2;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.description2 a {
+    text-decoration: none;
+    width: fit-content;
+    border: 1px solid black;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    padding: 0.3em 0.7em;
+    border-radius: 25px;
+    font-size: 0.7rem;
+    transition: 0.3s;
+}
+.description2 a:hover {
+    border: 1px solid black;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+#projects .image2 {
+    border: var(--border);
+    grid-area: image2;
+}
+#projects .learn2 {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border: var(--border);
+    grid-area: learn2;
+    padding: var(--padding);
+}
+#projects .description3 {
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border: var(--border);
+    grid-area: description3;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#projects .image3 {
+    border: var(--border);
+    grid-area: image3;
+}
+#projects .learn3 {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: learn3;
+    padding: var(--padding);
+}
+.sectiontitle4 {
+    color: var(--color-black);
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+.sectiontitle4 span{
+    color: var(--color-main);
+}
+#services {
+    scroll-margin-top: 4.5em;
+    margin: 2em 3em;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 32vh;
+    grid-template-areas:
+    "ui interactive animations site";
+    grid-gap: 0.8rem;
+}
+#services h3 {
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    margin: 0;
+}
+#services p {
+    font-size: var(--content-font);
+    margin: 0.5em 0 0 0;
+}
+#services .ui {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: ui;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#services .interactive {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: interactive;
+    padding: var(--padding);
+}
+#services .animations {
+    background-color: var(--color-main);
+    border: var(--border);
+    grid-area: animations;
+    padding: var(--padding);
+    color: var(--color-white);
+}
+#services .site {
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: site;
+    padding: var(--padding);
+}
+.sectiontitle5 {
+    color: var(--color-black);
+    text-align: center;
+    font-size: medium;
+    font-weight: 500;
+}
+.sectiontitle5 span{
+    color: var(--color-main);
+}
+#contact {
+    scroll-margin-top: 4.5em;
+    margin: 2em 3em;
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60vh;
+    grid-template-areas:
+    "contactinfo messageform";
+    grid-gap: 0.8rem;
+}
+#contact h3 {
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    margin: 0;
+}
+#contact p, #contact a {
+    font-size: var(--content-font);
+    margin: 0.5em 0 0 0;
+    color: var(--color-black);
+    text-decoration: none;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+#contact .contactinfo {
+    background-image: linear-gradient(to left, #cf455e, white);
+    border: var(--border);
+    grid-area: contactinfo;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.contactinfo i {
+    margin-right: 0.5em;
+    font-size: large;
+}
+.information span {
+    margin-left: 1.8em;
+}
+.connect p {
+    font-weight: 500;
+    margin: 0;
+}
+.connect i {
+    text-decoration: none;
+    font-size: xx-large;
+    margin: 0 5px 0 0;
+    transition: 0.3s;
+}
+.connect i:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+#contact .messageform {
+    position: relative;
+    background-color: var(--color-white);
+    border: var(--border);
+    grid-area: messageform;
+    padding: var(--padding);
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5em 0 0 0;
+}
+#contact form {
+    width: 100%;
+    text-align: center;
+}
+form .inputbox {
+    display: flex;
+    justify-content: space-between;
+}
+.inputbox .input {
+    width: 49.5%;
+}
+.field .item {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    border: var(--border);
+    outline: none;
+    font-family: 'Poppins';
+    font-size: var(--content-font);
+    color: var(--color-black);
+    margin: 0.2em 0;
+}
+form .textarea .item {
+    resize: none;
+}
+form button {
+    border: 1px solid black;
+    background-color: var(--color-main);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-white);
+    padding: 0.4em 0.9em;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+form button:hover {
+    border: 1px solid black;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+form .marginreset {
+    margin-left: 0.1em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--color-black);
+    font-size: var(--font-size-main);
+    font-weight: 600;
+    text-align: center;
+  }
+  .overlay span {
+    font-weight: 600;
+    font-size: var(--font-size-main);
+    margin-bottom: 0.5em;
+  }
+  #clearConfirm {
+    flex-direction: column;
+  }
+  .margin button {
+    border: 1px solid black;
+    background-color: var(--color-main);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-white);
+    padding: 0.4em 0.9em;
+    border-radius: 25px;
+    transition: 0.3s;
+    margin-left: 0.1em;
+  }
+  #confirmClear {
+    margin-left: 0.7em;
+  }
+  
+  .margin button:hover {
+    order: 1px solid black;
+    background-color: var(--color-white);
+    color: var(--color-black);
+  }

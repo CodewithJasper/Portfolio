@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Jasper<span> 's <span>Portfolio</span></span></a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="branding">
+            <div>Hello</div>
+            <h1>I'm Carl Jasper Grospe</h1>
+            <span>An aspiring <span>front-end developer</span> passionate about <br>building beautiful and functional websites.</span>
+            <p>Bringing ideas to life with clean, user-centered design.</p>
+            <button onclick="window.location.href='#projects'">View My Projects</button>
+        </div>
+        <img src="home-image.png" alt="">
+    </section>
+    <div class="sectiontitle1">About <span>Me</span></div>
+    <section id="about">
+        <div class="image">
+            <img src="about-image.png" alt="">
+        </div>
+        <div class="interests">
+            <h3>Personal Interests</h3>
+            <p>My interests in digital art, video editing, and music production greatly enhance my skills as a front-end developer. Digital art sharpens my design sensibility, video editing informs my understanding of pacing, and music production enhances my sense of rhythm, all of which contribute to creating engaging and user-friendly web experiences.</p>
+        </div>
+        <div class="introduction">
+            <h3>Who I Am</h3>
+            <p>I'm an aspiring front-end developer with a passion for creating functional, visually appealing, and responsive websites. Ever since I started learning web development, I've enjoyed the challenge of building user-friendly interfaces that make a lasting impact. I believe in continuous learning and love experimenting with new tools and technologies.</p>
+        </div>
+        <div class="goals">
+            <h3>Personal Goal</h3>
+            <p>My goal is to grow as a front-end developer by working on diverse projects that push the boundaries of what I know. I aim to build websites that are both visually striking and highly functional, ensuring a smooth experience for users. In the future, I hope to master more advanced frameworks and technologies, contributing to impactful digital products.</p>
+        </div>
+        <div class="education">
+            <h3>Relevant Education</h3>
+            <div class="school">
+                <div class="language">
+                    <p><i class="uil uil-university"></i>Maria Aurora National High School (MANHS), Grade 12 > <span>HTML</span></p>
+                </div>
+                <div class="language">
+                    <p><i class="uil uil-university"></i>Aurora State College of Technology (ASCOT), First Year > <span>JavaScript</span></p>
+                </div>
+                <div class="language">
+                    <p><i class="uil uil-university"></i>Aurora State College of Technology (ASCOT), 2nd Year > <span>HTML</span> <span>CSS</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="sectiontitle2">My <span>Skills</span></div>
+    <section id="skills">
+        <div class="html">
+            <h3>HTML</h3>
+            <p>I use HTML to build the structure of web pages, organizing text, images, and links in a simple, clear way. It's the foundation of every project I create.</p>
+        </div>
+        <div class="css">
+            <h3>CSS</h3>
+            <p>I use CSS to style my projects, adding colors, fonts, and layouts to make each page look polished and work on any device. It helps bring my designs to life.</p>
+        </div>
+        <div class="javascript">
+            <h3>JavaScript</h3>
+            <p>I use JavaScript to add interactive features like button clicks, form checks, and other elements that respond to users. This makes each website more dynamic and engaging.</p>
+        </div>
+        <div class="figma">
+            <h3>Figma</h3>
+            <p>I use Figma to design and plan how my projects will look before I start coding. It helps me try out different layouts and styles, making development easier.</p>
+        </div>
+    </section>
+    <div class="sectiontitle3">Project <span>Showcase</span></div>
+    <section id="projects">
+        <div class="description">
+            <div>
+                <h3>Portfolio Website</h3>
+                <p>A minimalistic portfolio website showcasing my projects, skills, background, and contact information in a visually appealing layout.</p>
+            </div>
+            <a href="#" target="_blank">Repository</a>
+        </div>
+        <div class="image">
+            <div class="slides">
+                <img src="project1.png" alt="Image 1">
+                <img src="project1.2.png" alt="Image 2">
+            </div>
+            <div class="dots">
+            <span class="dot" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            </div>
+        </div>
+        <div class="learn">
+            <h3>Insights</h3>
+            <p>I designed and developed this portfolio from scratch using HTML, CSS, and JavaScript, enhancing my skills in layout design and active navigation. This project taught me the importance of structured code for maintainability and gave me valuable experience in creating a professional-looking site that effectively highlights my abilities.</p>
+        </div>
+
+        <div class="description2">
+            <div>
+                <h3>User Authentication Form</h3>
+                <p>A basic login and signup form that ensures users enter correct information through input validation, enhancing both functionality and security.</p>
+            </div>
+            <a href="https://github.com/CodewithJasper/Log-In-Sign-Up-Form.git" target="_blank">Repository</a>
+        </div>
+        <div class="image2">
+            <div class="slides2">
+              <img src="project2.png" alt="User authentication form - login option">
+              <img src="project2.2.png" alt="User authentication form - signup option">
+            </div>
+            <div class="dots2">
+              <span class="dot2" onclick="showSlide2(0)"></span>
+              <span class="dot2" onclick="showSlide2(1)"></span>
+            </div>
+        </div>
+        <div class="learn2">
+            <h3>Insights</h3>
+            <p>In this project, I started by designing the form in Figma to ensure it is clear and user-friendly. I built the form using HTML and CSS, which helped me practice creating clean layouts. By adding validation with JavaScript, I learned how to check user input and provide helpful feedback, making the form more secure and easier to use.</p>
+        </div>
+
+        <div class="description3">
+            <div>
+                <h3>Task Manager Website</h3>
+                <p>A simple task manager web app where users can add, edit, and delete tasks to stay organized, with a clean design for ease of use.</p>
+            </div>
+            <a href="https://github.com/CodewithJasper/To-do-List.git" target="_blank">Repository</a>
+        </div>
+        <div class="image3">
+            <div class="slides3">
+                <img src="project3.png" alt="Interactive to-do list website displaying management features">
+                <img src="project3.2.png" alt="Interactive to-do list app displaying tasks">
+                <img src="project3.3.png" alt="Interactive to-do list app displaying incomplete tasks">
+              </div>
+              <div class="dots3">
+                <span class="dot3" onclick="showSlide3(0)"></span>
+                <span class="dot3" onclick="showSlide3(1)"></span>
+                <span class="dot3" onclick="showSlide3(2)"></span>
+              </div>
+        </div>
+        <div class="learn3">
+            <h3>Insights</h3>
+            <p>While developing the app, I learned to manipulate the DOM with JavaScript, which allowed me to add, remove, and update tasks directly on the web page. This experience improved my ability to create interactive features and enhanced my coding skills in managing user inputs and displaying data effectively.</p>
+        </div>
+    </section>
+    <div class="sectiontitle4">My <span>Services</span></div>
+    <section id="services">
+        <div class="ui">
+            <h3>UI Components</h3>
+            <p>I can create buttons, forms, and menus that are reusable and improve user experience by making navigation easy. These components can be styled to match a brand's look and feel.</p>
+        </div>
+        <div class="interactive">
+            <h3>Interactive Forms</h3>
+            <p>I can build forms with validation to make sure users enter correct information, making data collection smoother. This helps maintain data accuracy and improves user trust.</p>
+        </div>
+        <div class="animations">
+            <h3>Animations</h3>
+            <p>I can add CSS animations and transitions to make pages visually engaging and guide user attention. These effects make the site feel dynamic and enhance user interaction.</p>
+        </div>
+        <div class="site">
+            <h3>Site Updates</h3>
+            <p>I can keep websites updated by adding new content, fixing bugs, and ensuring everything works smoothly over time. Regular updates keep sites fresh and help improve user satisfaction.</p>
+        </div>
+    </section>
+    <div class="sectiontitle5">Contact <span>Me</span></div>
+    <section id="contact">
+        <div class="contactinfo">
+            <div class="information">
+                <h3>Contact Information</h3>
+                <p><i class="uil uil-map-marker"></i>Purok 5, Brgy. Florida, Maria Aurora, <br><span>Aurora, Philippines 3202</span></p>
+                <p><i class="uil uil-phone"></i>+63 907-808-4782</p>
+                <a href="mailto:jasper08.23.05@gmail.com"><i class="uil uil-envelope-alt"></i>jasper08.23.05@gmail.com</a>
+            </div>
+            <div class="connect">
+                <p>Connect with me</p>
+                <a href="https://github.com/CodewithJasper" target="_blank"><i class="uil uil-github"></i></a><a href="https://www.facebook.com/jasper.grospe.7" target="_blank"><i class="uil uil-facebook"></i></a>
+            </div>
+        </div>
+        <div class="messageform">
+            <h3>Send a message</h3>
+            <div class="form">
+                <form id="contactForm" action="contact.php" method="POST">
+                    <div class="inputbox">
+                        <div class="input field">
+                            <input type="text" placeholder="First Name" id="first_name" name="first_name" class="item" autocomplete="off">
+                        </div>
+                        <div class="input field">
+                            <input type="text" placeholder="Last Name" id="last_name" name="last_name" class="item" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <div class="input field">
+                            <input type="email" placeholder="Email" id="email" name="email" class="item" autocomplete="off">
+                        </div>
+                        <div class="input field">
+                            <input type="text" placeholder="Subject" id="subject" name="subject" class="item" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="textarea field">
+                        <textarea name="message" rows="8" placeholder="Message" id="message" class="item" autocomplete="off"></textarea>
+                    </div>
+                    <button type="button" id="clearBtn">Clear</button>
+                    <button type="submit" class="marginreset">Send</button>
+                </form>
+                
+                <div class="overlay" id="successMessage">Thank you for sending a message!</div>
+                <div class="overlay" id="validationError">Please fill all fields correctly!</div>
+                <div class="overlay" id="clearConfirm">
+                    <span>Are you sure you want to clear the form?</span>
+                    <div class="margin">
+                        <button id="confirmClear">Okay</button>
+                        <button id="cancelClear">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
